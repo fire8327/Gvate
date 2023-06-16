@@ -29,4 +29,8 @@
     .container{        
         @apply max-w-[var(--widthContent)]
     }
+
+    .filter-active {
+        @apply text-white bg-[#D93A4D] rounded-lg md:rounded-2xl lg:rounded-[40px]
+    }
 }

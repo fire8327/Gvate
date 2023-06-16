@@ -1,6 +1,6 @@
 /* menu */
 $("#toggler,#close").click(()=>{    
-    $("#menu").toggleClass("max-lg:-translate-y-full")    
+    $("#menu").toggleClass("max-xl:-translate-y-full")    
 })
 
 
