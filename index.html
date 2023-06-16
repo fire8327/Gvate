@@ -5,11 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/style/output.css">
+    <link rel="stylesheet" href="assets/css/output.css">
 </head>
-<body class="grid-container h-screen ">
-    <div class="bg-slate-700 col-[full]">
+<body class="flex flex-col min-h-screen">
+    <header class="w-full min-h-[584px] md:min-h-[500px] lg:min-h-[558px] bg-[url(assets/images/header/bg.png)] bg-cover text-lg">
+        <div class="flex items-center wrapper justify-between py-4 relative">
+            <button type="button" class="lg:hidden" id="toggler"><img src="assets/images/icons/menu.png" alt=""></button>
+            <a href=""><img src="assets/images/header/logo.png" alt=""></a>
+            <div class="flex items-center gap-6 md:gap-7">
+                <div class="flex items-center gap-6 md:gap-9 text-[#282A2B]">
+                    <div class="flex items-center gap-1 max-lg:hidden">
+                        <img src="assets/images/icons/location.png" alt="">
+                        <p class="font-light">Санкт-Петербург, ул. 4-ая Советская, 15/Б</p>
+                    </div>
+                    <a href="tel:+7 (812) 424-56-99" class="flex items-center gap-1">
+                        <img src="assets/images/icons/phone.png" alt="">
+                        <span class="font-semibold max-xl:hidden">+7 (812) 424-56-99</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-1.5 max-md:hidden">
+                    <a href=""><img src="assets/images/icons/tg.png" alt=""></a>
+                    <a href=""><img src="assets/images/icons/whatsapp.png" alt=""></a>  
+                    <button class="bg-[#F0C6CB40] rounded-[32px] text-[#D93A4D] text-[15px] font-semibold py-3 px-[22px]">Заказать звонок</button>                  
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-px bg-[#282A2B] opacity-[6%]"></div>
+        <nav class="wrapper lg:justify-between flex items-center max-xl:bg-white gap-6 md:gap-10 lg:gap-[52px] py-6 md:py-10 lg:pt-4 lg:pb-5 text-[17px] font-medium max-xl:absolute top-0 left-0 max-lg:-translate-y-full max-lg:flex-col max-lg:w-full transition-all duration-500 max-lg:min-h-screen max-lg:justify-center relative" id="menu">
+            <button type="button" id="close" class="absolute top-8 right-8 lg:hidden">
+                <img src="assets/images/icons/close.png" alt="" class="w-12">
+            </button>
+            <div class="relative min-w-[59px] lg:h-7">
+                <div class="dropdown lg:absolute max-lg:flex max-lg:flex-col max-lg:items-center">
+                    <button class="flex items-center gap-1 toggler">
+                        <span>О нас</span>
+                        <img src="assets/images/icons/dropdown.png" alt="">
+                    </button>
+                    <div class="list hidden rounded-2xl overflow-hidden">
+                        <div class="flex flex-col">
+                            <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
+                            <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
+                            <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative min-w-[155px] lg:h-7">
+                <div class="dropdown lg:absolute max-lg:flex max-lg:flex-col max-lg:items-center">
+                    <button class="flex items-center gap-1 toggler">
+                        <span>Создание сайтов</span>
+                        <img src="assets/images/icons/dropdown.png" alt="">
+                    </button>
+                    <div class="list hidden rounded-2xl overflow-hidden">
+                        <div class="flex flex-col">
+                            <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
+                            <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
+                            <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative min-w-[231px] lg:h-7">
+                <div class="dropdown lg:absolute max-lg:flex max-lg:flex-col max-lg:items-center">
+                    <button class="flex items-center gap-1 toggler">
+                        <span>Маркетинг и продвижение</span>
+                        <img src="assets/images/icons/dropdown.png" alt="">
+                    </button>
+                    <div class="list hidden rounded-2xl overflow-hidden">
+                        <div class="flex flex-col">
+                            <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
+                            <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
+                            <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <a href="">Сопровождение сайтов</a>
+            <a href="">Портфолио</a>
+            <a href="">Цены</a>
+            <a href="">Контакты</a>
+        </nav>
+    </header>
 
-    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
 </body>
-</html>
+</html> 
