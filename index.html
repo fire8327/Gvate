@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/output.css">
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="w-full min-h-[584px] md:min-h-[600px] lg:min-h-[558px] bg-[url(assets/images/header/bg.png)] bg-cover text-lg overflow-hidden">
+    <header class="w-full min-h-[584px] md:min-h-[600px] lg:min-h-[558px] bg-[url(assets/images/header/bg.png)] bg-cover text-lg">
         <div class="flex items-center wrapper justify-between py-4 relative">
             <button type="button" class="xl:hidden" id="toggler"><img src="assets/images/icons/menu.png" alt=""></button>
             <a href=""><img src="assets/images/header/logo.png" alt="" class="max-md:w-[131px]"></a>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="w-full h-px bg-[#282A2B] opacity-[6%]"></div>
-        <nav class="max-xl:z-50 wrapper xl:justify-between flex items-center bg-white gap-6 md:gap-10 lg:gap-[52px] py-6 md:py-10 lg:pt-4 lg:pb-5 text-[17px] font-medium max-xl:absolute top-0 left-0 max-xl:-translate-y-full max-xl:flex-col max-xl:w-full transition-all duration-500 max-xl:h-screen max-xl:justify-center" id="menu">
+        <nav class="max-xl:z-50 wrapper xl:justify-between flex items-center bg-white gap-6 xl:gap-[52px] py-6 md:py-10 lg:pt-4 lg:pb-5 text-[17px] font-medium max-xl:absolute top-0 left-0 max-xl:-translate-y-full max-xl:flex-col max-xl:w-full transition-all duration-500 max-xl:h-screen max-xl:justify-center" id="menu">
             <button type="button" id="close" class="absolute top-8 right-8 xl:hidden">
                 <img src="assets/images/icons/close.png" alt="" class="w-12">
             </button>
@@ -85,178 +85,180 @@
             <a href="">Цены</a>
             <a href="">Контакты</a>
         </nav>
-        <div class="wrapper flex max-lg:flex-col py-9 md:py-14 lg:pt-[78px] lg:pb-[112px]">
-            <div class="flex flex-col max-lg:text-center max-lg:items-center gap-6 lg:gap-8">
-                <p class="font-[800] text-[26px] md:text-4xl lg:text-[56px] leading-8 md:leading-[48px] lg:leading-[64px]">Смотрите <br> наши проекты</p>
-                <p class="text-lg md:text-xl lg:text-2xl max-w-[569px] leading-7 md:leading-8 lg:leading-9">За 17 лет мы реализовали свыше 600 проектов. Ниже представлены некоторые из наших работ</p>
+        <div class="grid-container">
+            <div class="flex max-lg:flex-col py-9 md:py-14 lg:pt-[78px] lg:pb-[112px] relative overflow-x-clip col-[main-start/full-end]">
+                <div class="flex flex-col max-lg:text-center max-lg:items-center gap-6 lg:gap-8">
+                    <p class="font-[800] text-[26px] md:text-4xl lg:text-[56px] leading-8 md:leading-[48px] lg:leading-[64px]">Смотрите <br> наши проекты</p>
+                    <p class="text-lg md:text-xl lg:text-2xl max-w-[569px] leading-7 md:leading-8 lg:leading-9">За 17 лет мы реализовали свыше 600 проектов. Ниже представлены некоторые из наших работ</p>
+                </div>
+                <img src="assets/images/header/projects.png" alt="" class="max-md:min-w-[540px] absolute top-[175px] left-2.5 lg:-top-[56px] xl:-top-[120px] lg:left-1/2">
             </div>
-            <img src="assets/images/header/projects.png" alt="" class="max-md:min-w-[540px] absolute top-[258px] left-2.5 lg:top-7 lg:left-1/2">
         </div>
     </header>
 
     <div class="grid-container pt-10 md:pt-16 lg:pt-[90px] z-10">
         <div class="max-md:col-[main-start/full-end] md:w-fit max-md:overflow-scroll flex items-center gap-1 rounded-lg md:rounded-2xl lg:rounded-[40px] shadow-[0_6px_20px_#f7f7f7] border border-[#F6F7F8] text-[#55585D] text-[17px] font-semibold">
-            <button type="button" class="px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0 filter-active">Все кейсы</button>
-            <button type="button" class="px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0">Разработка</button>
-            <button type="button" class="px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0">Продвижение</button>
-            <button type="button" class="px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0">Поддержка</button>
+            <button type="button" data-filt="all" class="filter px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0 filter-active">Все кейсы</button>
+            <button type="button" data-filt="dev" class="filter px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0">Разработка</button>
+            <button type="button" data-filt="promo" class="filter px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0">Продвижение</button>
+            <button type="button" data-filt="sup" class="filter px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0">Поддержка</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-4 pt-10 md:pt-12 lg:pt-[60px] text-white">
-            <div class="el relative">
+            <div class="el relative dev">
                 <img src="assets/images/cases/1.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Дегтярные бани</p>
                     <div class="text-sm">Разработка сайта для банного комплекса “Дегтярные бани”</div>
                 </div>
             </div>
-            <div class="el relative">
+            <div class="el relative promo">
                 <img src="assets/images/cases/2.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Турболидер</p>
                     <div class="text-sm">Кейс продвижения сайта по производству и ремонту турбин</div>
                 </div>
             </div>
-            <div class="el relative">
+            <div class="el relative dev">
                 <img src="assets/images/cases/3.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Luxury Petersburg</p>
                     <div class="text-sm">Разработка сайта для премиальных туров по Санкт-Петербургу</div>
                 </div>
             </div>
-            <div class="el relative">
+            <div class="el relative dev">
                 <img src="assets/images/cases/4.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Фонд развития культуры и туризма </p>
                     <div class="text-sm">Разработка сайта для премиальных туров по Санкт-Петербургу</div>
                 </div>
             </div>
-            <div class="el relative">
+            <div class="el relative dev">
                 <img src="assets/images/cases/5.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">ORTO</p>
                     <div class="text-sm">Разработка сайта для банного комплекса “Дегтярные бани”</div>
                 </div>
             </div>
-            <div class="el relative">
+            <div class="el relative promo">
                 <img src="assets/images/cases/6.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Achterbahn-cyprus</p>
                     <div class="text-sm">Кейс продвижения сайта по производству и ремонту турбин</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/7.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Solo office interiors</p>
                     <div class="text-sm">Разработка сайта для банного комплекса “Дегтярные бани”</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden promo">
                 <img src="assets/images/cases/8.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Кодекс</p>
                     <div class="text-sm">Кейс продвижения сайта по производству и ремонту турбин</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/9.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">РосМаглев</p>
                     <div class="text-sm">Разработка сайта для премиальных туров по Санкт-Петербургу</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/10.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Конференц - залы</p>
                     <div class="text-sm">Разработка сайта для премиальных туров по Санкт-Петербургу</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/11.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">MODULBOX</p>
                     <div class="text-sm">Разработка сайта для банного комплекса “Дегтярные бани”</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden promo">
                 <img src="assets/images/cases/12.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Helix</p>
                     <div class="text-sm">Кейс продвижения сайта по производству и ремонту турбин</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/13.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">ИПК - Интеграл</p>
                     <div class="text-sm">Разработка сайта для премиальных туров по Санкт-Петербургу</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/14.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">ООО «Зевс»</p>
                     <div class="text-sm">Разработка сайта для банного комплекса “Дегтярные бани”</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden promo">
                 <img src="assets/images/cases/15.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Формула защиты</p>
                     <div class="text-sm">Кейс продвижения сайта по производству и ремонту турбин</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/16.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Style-dance</p>
                     <div class="text-sm">Разработка сайта для премиальных туров по Санкт-Петербургу</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/17.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">SKINmad</p>
                     <div class="text-sm">Разработка сайта для банного комплекса “Дегтярные бани”</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden promo">
                 <img src="assets/images/cases/18.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Beauty Box</p>
                     <div class="text-sm">Кейс продвижения сайта по производству и ремонту турбин</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/19.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Автобезопасность</p>
                     <div class="text-sm">Разработка сайта для премиальных туров по Санкт-Петербургу</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/20.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">ФЭС Сервис</p>
                     <div class="text-sm">Разработка сайта для банного комплекса “Дегтярные бани”</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden promo">
                 <img src="assets/images/cases/21.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">MasterTurbo</p>
                     <div class="text-sm">Кейс продвижения сайта по производству и ремонту турбин</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/22.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Floor-master</p>
                     <div class="text-sm">Разработка сайта для премиальных туров по Санкт-Петербургу</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden dev">
                 <img src="assets/images/cases/23.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Теплогород</p>
@@ -270,7 +272,7 @@
                     <div class="text-sm">Кейс продвижения сайта по производству и ремонту турбин</div>
                 </div>
             </div>
-            <div class="el relative max-lg:hidden">
+            <div class="el relative max-lg:hidden promo">
                 <img src="assets/images/cases/25.png" alt="" class="w-full">
                 <div class="flex flex-col gap-2 absolute left-6 bottom-6 md:left-9 md:bottom-9">
                     <p class="font-bold text-lg">Белые озерки</p>
