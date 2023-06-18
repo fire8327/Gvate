@@ -1,22 +1,22 @@
 /* menu */
 $("#toggler,#close").click(()=>{    
-    $("#menu").toggleClass("max-xl:-translate-y-full")    
-})
+    $("#menu").toggleClass("max-xl:-translate-y-full");
+    $("body").toggleClass("overflow-hidden");
+});
 
 
 /* dropdown */
 $(".dropdown").each((i,el)=>{
-    let toggler = $(el).find(".toggler")
-    let list = $(el).find(".list")
+    let toggler = $(el).find(".toggler");
+    let list = $(el).find(".list");
     toggler.click(()=>{
-        list.slideToggle(500)
-        list.toggleClass("shadow-[0_0_20px_-13px]")
-    })
-})
+        list.slideToggle(500);
+    });
+});
 
 
 /* observer width */
-let width = $(window).width()
+let width = $(window).width();
 $(window).on("load resize", () => {
     width = $(window).width()
     if(width < 1024) {

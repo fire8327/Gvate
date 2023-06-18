@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/output.css">
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="w-full min-h-[584px] md:min-h-[600px] lg:min-h-[558px] bg-[url(assets/images/header/bg.png)] bg-cover text-lg overflow-hidden relative">
+    <header class="w-full min-h-[584px] md:min-h-[600px] lg:min-h-[558px] bg-[url(assets/images/header/bg.png)] bg-cover text-lg overflow-hidden">
         <div class="flex items-center wrapper justify-between py-4 relative">
             <button type="button" class="xl:hidden" id="toggler"><img src="assets/images/icons/menu.png" alt=""></button>
             <a href=""><img src="assets/images/header/logo.png" alt="" class="max-md:w-[131px]"></a>
@@ -31,17 +31,17 @@
             </div>
         </div>
         <div class="w-full h-px bg-[#282A2B] opacity-[6%]"></div>
-        <nav class="max-xl:z-50 wrapper xl:justify-between flex items-center max-xl:bg-white gap-6 md:gap-10 lg:gap-[52px] py-6 md:py-10 lg:pt-4 lg:pb-5 text-[17px] font-medium max-xl:absolute top-0 left-0 max-xl:-translate-y-full max-xl:flex-col max-xl:w-full transition-all duration-500 max-xl:min-h-screen max-xl:justify-center relative" id="menu">
+        <nav class="max-xl:z-50 wrapper xl:justify-between flex items-center bg-white gap-6 md:gap-10 lg:gap-[52px] py-6 md:py-10 lg:pt-4 lg:pb-5 text-[17px] font-medium max-xl:absolute top-0 left-0 max-xl:-translate-y-full max-xl:flex-col max-xl:w-full transition-all duration-500 max-xl:h-screen max-xl:justify-center" id="menu">
             <button type="button" id="close" class="absolute top-8 right-8 xl:hidden">
                 <img src="assets/images/icons/close.png" alt="" class="w-12">
             </button>
-            <div class="relative min-w-[59px] lg:h-7">
+            <div class="xl:relative min-w-[59px] lg:h-7">
                 <div class="dropdown lg:absolute max-lg:flex max-lg:flex-col max-lg:items-center">
                     <button class="flex items-center gap-1 toggler">
                         <span>О нас</span>
                         <img src="assets/images/icons/dropdown.png" alt="">
                     </button>
-                    <div class="list hidden rounded-2xl overflow-hidden">
+                    <div class="list hidden rounded-2xl overflow-hidden xl:bg-white xl:z-20 xl:shadow-[0_0_20px_-13px_black]">
                         <div class="flex flex-col">
                             <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
                             <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
@@ -50,13 +50,13 @@
                     </div>
                 </div>
             </div>
-            <div class="relative min-w-[155px] lg:h-7">
+            <div class="xl:relative min-w-[155px] lg:h-7">
                 <div class="dropdown lg:absolute max-lg:flex max-lg:flex-col max-lg:items-center">
                     <button class="flex items-center gap-1 toggler">
                         <span>Создание сайтов</span>
                         <img src="assets/images/icons/dropdown.png" alt="">
                     </button>
-                    <div class="list hidden rounded-2xl overflow-hidden">
+                    <div class="list hidden rounded-2xl overflow-hidden xl:bg-white xl:z-20 xl:shadow-[0_0_20px_-13px_black]">
                         <div class="flex flex-col">
                             <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
                             <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
@@ -65,13 +65,13 @@
                     </div>
                 </div>
             </div>
-            <div class="relative min-w-[231px] lg:h-7">
+            <div class="xl:relative min-w-[231px] lg:h-7">
                 <div class="dropdown lg:absolute max-lg:flex max-lg:flex-col max-lg:items-center">
                     <button class="flex items-center gap-1 toggler">
                         <span>Маркетинг и продвижение</span>
                         <img src="assets/images/icons/dropdown.png" alt="">
                     </button>
-                    <div class="list hidden rounded-2xl overflow-hidden">
+                    <div class="list hidden rounded-2xl overflow-hidden xl:bg-white xl:z-20 xl:shadow-[0_0_20px_-13px_black]">
                         <div class="flex flex-col">
                             <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
                             <a href="" class="transition-all duration-500 hover:bg-slate-100 py-2 px-4">Пример ссылки</a>
@@ -94,7 +94,7 @@
         </div>
     </header>
 
-    <div class="grid-container pt-10 md:pt-16 lg:pt-[90px]">
+    <div class="grid-container pt-10 md:pt-16 lg:pt-[90px] z-10">
         <div class="max-md:col-[main-start/full-end] md:w-fit max-md:overflow-scroll flex items-center gap-1 rounded-lg md:rounded-2xl lg:rounded-[40px] shadow-[0_6px_20px_#f7f7f7] border border-[#F6F7F8] text-[#55585D] text-[17px] font-semibold">
             <button type="button" class="px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0 filter-active">Все кейсы</button>
             <button type="button" class="px-4 pt-2.5 pb-3 lg:px-7 lg:pt-3 lg:pb-4 shrink-0">Разработка</button>
